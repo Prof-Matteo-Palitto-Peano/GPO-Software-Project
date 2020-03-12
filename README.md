@@ -25,15 +25,15 @@ BBT-SaS --> Old Sport --> Challager SW ---|
 ```
 ## NO OK Companies
 
-* LaClareCompany --> InfoMaNoTech
-* TBT-Spa --> Ihana Disk
-* NoSnitch --> TBT-Music (TBT-Spa???)
-* Ihana Disk??? --> TBT-Spa
 * PGC-Society --> LeClareCompany
+* LaClareCompany --> InfoMaNoTech
+* TBT-Spa --> InfoMaNoTech
+* InfoMaNoTech --> TBT-Spa
+* NoSnitch --> TBT-Spa
 
-InfoMaNoTech --> ???
 ??? --> PGC-Society
-NoSnitch --> ???
+
+??? --> NoSnitch
 
 ## NO OK Students
 Curiuluc, Cavallone, Pedone, Guidetti
