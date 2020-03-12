@@ -36,7 +36,7 @@ InfoMaNoTech --> ???
 NoSnitch --> ???
 
 ## NO OK Students
-Curiuluc, Cavallone, Pedone
+Curiuluc, Cavallone, Pedone, Guidetti
 
 ## Interazione con Cliente
 1. Cliente contatta Azienda con Richiesta di realizzazione progetto.
