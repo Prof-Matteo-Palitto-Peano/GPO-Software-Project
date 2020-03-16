@@ -27,9 +27,9 @@ BBT-SaS --> Old Sport --> Challager SW ---|
 
 * PGC-Society --> LeClareCompany
 * LaClareCompany --> InfoMaNoTech
-* TBT-Spa --> InfoMaNoTech
+* TBT-Spa --> noSnitch
 * InfoMaNoTech --> TBT-Spa
-* NoSnitch --> TBT-Spa
+* NoSnitch --> PGC-S...???
 
 ??? --> PGC-Society
 
