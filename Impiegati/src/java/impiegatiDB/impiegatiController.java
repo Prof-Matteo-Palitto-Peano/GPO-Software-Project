@@ -5,13 +5,8 @@
  */
 package impiegatiDB;
 
-//import java.io.IOException;
-//  import java.io.PrintWriter;
-//import javax.servlet.ServletException;
+
 import javax.servlet.annotation.WebServlet;
-//import javax.servlet.http.HttpServlet;
-//import javax.servlet.http.HttpServletRequest;
-//import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
 import java.io.*;
 import java.util.*;
@@ -25,8 +20,8 @@ import javax.servlet.http.*;
  */
 @WebServlet(name = "impiegatiModel", urlPatterns = {"/impiegatiModel"})
 public class impiegatiController extends HttpServlet {
-    QueryResult rs = null;
-    static Model db = new Model();
+    DBQuery rs = null;
+    Model db = new Model();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,8 +37,16 @@ public class impiegatiController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
 
-        try {       
-            rs = db.getEmployeesList();
+        try { 
+            String op=request.getParameter("op");
+            if(op == "rimuovi") {
+                String id=request.getParameter("id");
+                rs = db.removeEmployee(id);
+            } else {
+                rs = db.insertEmployee();               
+            }
+            //rs = db.getEmployeesList();
+            System.out.println("NUM> " + rs.employees.size());
             
             //Utilizza il Dispatcher per passare la lista al View Layer
             //aggiungo l'attributo che chiamo modelAttr il cui valore e' l'oggetto modelObj

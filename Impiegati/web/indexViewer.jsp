@@ -6,7 +6,7 @@
 
 
 <%@page import="java.util.ArrayList"%>
-<%@page import="impiegatiDB.QueryResult"%>
+<%@page import="impiegatiDB.DBQuery"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,10 +17,10 @@
     </head>
     <body>
         <%  
-            QueryResult rs=(QueryResult)request.getAttribute("modelAttr");  
-            out.print("Lista impiegati, "+rs);  
+            DBQuery rs=(DBQuery)request.getAttribute("modelAttr");  
+            //out.print("Lista impiegati, "+rs);  
         %>
-        <h1>Lista nel DB</h1>
+        <h1>Lista impiegati nel DB</h1>
         <table border="1">
             <thead>
                 <tr>
@@ -36,11 +36,17 @@
             <tbody>
                 <% 
                     for(ArrayList<String> employee : rs.employees) { // Extract data from result set 
-                        out.print("<tr>");
+                        //out.print("<tr>");
+                %>
+                <tr>
+                <%
                                 for(String colValue : employee) {
                                     out.print("<td>" + colValue + "</td>");
                                 } // end for loop 
-                        out.print("</tr>");
+                %>
+                <td><a href="/impiegatiModel?op=rimuovi&id=<%= employee.get(0) %>">rimuovi</a></td></tr>
+                <%
+                        //out.print("</tr>");
                     } // end for employee loop      
                 %>
             </tbody>
